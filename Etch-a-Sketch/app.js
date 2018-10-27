@@ -1,0 +1,113 @@
+var containerSide = '300px',
+    type = 'gradient',
+    box = document.getElementsByClassName('box'),
+    table = document.querySelector('.table'),
+    gradient = document.querySelector('#gradient'),
+    random  = document.querySelector('#random'),
+    reset = document.querySelector('#reset'),
+    size = document.querySelector('#size'),
+    boxSide =16;
+
+table.style.width = containerSide;
+
+init();
+
+//Event listeners
+
+reset.addEventListener('click', () => {
+    resetGrid(size.value);
+});
+
+random.addEventListener('click' () => {
+    type = 'random';
+    this.classList.add('active');
+    gradient.classList.remove('active');
+});
+
+gradient.addEventListener('click', () => {
+    type = 'gradient';
+    this.classList.add('active');
+    random.classList.remove('active');
+});
+
+size.addEventListener('input', (e) => {
+    if (this.value !== 16) {
+        console.log(this.value);
+        resetGrid(this.value);
+    }
+});
+
+//init function
+function init() {
+    for(var i=0; i<boxSide*boxSide; i++) {
+        createDiv();
+    }
+    main();
+}
+
+//reset function
+
+function resetGrid(sidee) {
+    boxSide = sidee;
+    table.innerHTML = '';
+    init();
+    size.value = sidee;
+}
+
+function main() {
+    for (var i=0; i<box.length; i++) {
+        box[i].addEventListener('mouseover', () => {
+            if (type == 'random') {
+                randomColor(this);
+            }
+            else {
+                opacityIncrement(this);
+            }
+        });
+    }
+}
+
+function opacityIncrement(event) {
+    event.style.background = '#f5f5f5';
+    event.style.opacity = parseFloat(event.style.opacity) + 0.2;
+}
+
+// get random color
+function randomColor(event) {
+    event.style.opacity = 1;
+    event.style.background = '#' +(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6);
+}
+
+//Create div and append to table
+function createDiv() {
+    var divElt = document.createElement('div');
+    divElt.classList.add('box');
+    divElt.style.height = table.offsetWidth / boxSide + 'px';
+    divElt.style.width = table.offsetWidth / boxSide + 'px';
+    divElt.style.opacity = 0.1;
+    table.appendChild(divElt);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

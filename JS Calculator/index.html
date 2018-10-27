@@ -1,30 +1,60 @@
-<h1>Javascript Calculator</h1>
-<p class="warning">Don't divide by zero</p>
+<!DOCTYPE html>
+<html lang="en">
 
-<div id="calculator" class="calculator">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main.css">
+    <title>JS Scientific Calculator</title>
+</head>
 
-    <button id="clear" class="clear">C</button>
-    <div id="viewer" class="viewer">0</div>
-    <button class="num" data-num="7">7</button>
-    <button class="num" data-num="8">8</button>
-    <button class="num" data-num="9">9</button>
-    <button class="num" data-ops="plus" class="ops">+</button>
+<body>
 
-    <button class="num" data-num="4">4</button>
-    <button class="num" data-num="5">5</button>
-    <button class="num" data-num="6">6</button>
-    <button data-ops="minus" class="ops">-</button>
-    
-    <button class="num" data-num="1">1</button>
-    <button class="num" data-num="2">2</button>
-    <button class="num" data-num="3">3</button>
-    <button data-ops="times" class="ops">*</button>
-    
-    <button class="num" data-num="0">0</button>
-    <button class="num" data-num=".">.</button>
-    <button id="equals" class="equals" data-result="">=</button>
-    <button data-ops="divided by" class="ops">/</button>
-    
-</div>
+    <div class="calculator">
+        <input type="text" id="screen" maxlength="20">
+        <div class="calc-buttons">
+            
+            <div class="main-buttons">
+                <button class="button triggers">C</button>
+                <button class="button basic-ops">(</button>
+                <button class="button basic-ops">)</button>
+                <button class="button numbers">7</button>
+                <button class="button numbers">8</button>
+                <button class="button numbers">9</button>
+                <button class="button numbers">4</button>
+                <button class="button numbers">5</button>
+                <button class="button numbers">6</button>
+                <button class="button numbers">1</button>
+                <button class="button numbers">2</button>
+                <button class="button numbers">3</button>
+                <button class="button basic-ops">±</button>
+                <button class="button numbers">0</button>
+                <button class="button basic-ops">.</button>
+            <div class="secondary-buttons">
+                <button class="button triggers">&#60;=</button>
+                <button class="button complex-ops">%</button>
+                <button class="button complex-ops">x !</button>
+                <button class="button complex-ops">x^</button>
+                <button class="button basic-ops">*</button>
+                <button class="button basic-ops">/</button>
+                <button class="button complex-ops">ln</button>
+                <button class="button complex-ops">e</button>
+                <button class="button basic-ops">+</button>
+                <button class="button complex-ops">x ²</button>
+                <button class="button complex-ops">log</button>
+                <button class="button complex-ops">cos</button>
+                <button class="button basic-ops">-</button>
+                <button class="button complex-ops">√</button>
+                <button class="button complex-ops">sin</button>
+                <button class="button complex-ops">tan</button>
+                <button class="button triggers">=</button>
+                <button class="button complex-ops">&#x003C0;</button>
+                <button class="button complex-ops">rad</button>
+            </div>
+            </div>
 
-<button id="reset" class="reset">Reset</button>
+        </div>
+    </div>
+    <script src="app.js" charset ="utf-8"></script>
+    </body>
+</html>
