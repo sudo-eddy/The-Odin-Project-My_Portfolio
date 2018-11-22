@@ -14,23 +14,23 @@ init();
 
 //Event listeners
 
-reset.addEventListener('click', () => {
+reset.addEventListener('click', function() {
     resetGrid(size.value);
 });
 
-random.addEventListener('click' () => {
+random.addEventListener('click' function() {
     type = 'random';
     this.classList.add('active');
     gradient.classList.remove('active');
 });
 
-gradient.addEventListener('click', () => {
+gradient.addEventListener('click', function() {
     type = 'gradient';
     this.classList.add('active');
     random.classList.remove('active');
 });
 
-size.addEventListener('input', (e) => {
+size.addEventListener('input', function(e) {
     if (this.value !== 16) {
         console.log(this.value);
         resetGrid(this.value);
@@ -80,7 +80,7 @@ function randomColor(event) {
 
 //Create div and append to table
 function createDiv() {
-    var divElt = document.createElement('div');
+    var divElt = document.createElement("div");
     divElt.classList.add('box');
     divElt.style.height = table.offsetWidth / boxSide + 'px';
     divElt.style.width = table.offsetWidth / boxSide + 'px';
