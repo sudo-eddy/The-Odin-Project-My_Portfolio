@@ -1,20 +1,22 @@
 body {
 
-background: linear-gradient(to right, #85D8CE, #085078); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #BDBDBD, #B2EBF2);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .calculator {
-   width: 490px;
-background-color: #969696;
-padding: 20px;
-border-radius: 15px;
-margin: 12% 30%;
+    width: 490px;
+    background-color: #607D8B;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 12% 30%;
 
 }
 
 
 input[type=text] {
-width: 315px;
+    text-align: right;
+    width: 315px;
     height: 30px;
     border-radius: 5px;
     border: 0px;
@@ -26,30 +28,31 @@ width: 315px;
 }
 
 .calc-buttons {
-    display: grid;
-justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
 }
 
 .button {
-   margin: 3px;
-width: 63px;
-border: none;
-height: 25px;
-border-radius: 4px;
-color: #000000;
-cursor: pointer;
+    margin: 3px;
+    width: 63px;
+    border: none;
+    height: 25px;
+    border-radius: 4px;
+    color: #000000;
+    cursor: pointer;
 }
 
 button:hover {
-  background-color: hsla(180, 100%, 40%, 0.3);
-  transition: .2s;
+    background-color: hsla(180, 100%, 40%, 0.3);
+    transition: .2s;
 }
 
 
 
 
-.functions-one {
+.main-buttons {
     width: 210px;
     display: flex;
     flex-wrap: wrap;
@@ -57,27 +60,27 @@ button:hover {
 }
 
 
-.functions-two {
-width: 280px;
+.secondary-buttons {
+    width: 280px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .triggers {
-    background-color: #ffc266;
+    background-color: #2196F3;
 }
 
 
 
 .numbers {
-    background-color: #999999;
+    background-color: #FFFFFF;
 }
 
-.basic-stuff {
+.basic-ops {
     background-color: #80d4ff;
 }
 
-.complex-stuff {
-    background-color: #80ffff;
+.complex-ops {
+    background-color: #00BCD4;
 }
